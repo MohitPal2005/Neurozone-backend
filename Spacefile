@@ -1,0 +1,24 @@
+# Spacefile for NeuroZone Flask Backend
+app:
+  name: neurozone-backend
+  engine: python3.11
+
+  commands:
+    start: python app.py
+
+  env:
+    - GROQ_API_KEY
+    - SERPAPI_KEY
+
+  # Allow external requests
+  http_routes:
+    - path: /
+      methods: ["GET"]
+    - path: /product
+      methods: ["GET"]
+    - path: /search
+      methods: ["GET"]
+    - path: /chat
+      methods: ["POST"]
+    - path: /list-models
+      methods: ["GET"]
