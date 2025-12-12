@@ -3,6 +3,6 @@ __pycache__/
 node_modules/
 .env
 serviceAccountKey.json
+static/
 static/images/
-data/*.csv
 *.zip
